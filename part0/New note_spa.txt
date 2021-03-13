@@ -1,0 +1,17 @@
+User inputs note and confirms with a button
+
+note over browser:
+browser executes the event handler
+that adds new note to notes JSON object
+and renders notes to display
+end note
+
+note over browser:
+browser executes the sending function
+that converts json object to string and sends to server
+end note
+
+browser -> server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server handles POST request:
+new note added to JSON file notes on server
+server --> browser: server status code 201 (created)
