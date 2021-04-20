@@ -1,6 +1,6 @@
-# Web Development - Deep Dive Into Modern Web Development - Full Stack Open 2020 Specialization
+# Web Development - Deep Dive Into Modern Web Development - Full Stack Open 2021 Specialization
 
-Complete the [Deep Dive Into Modern Web Development - Full Stack Open 2020](https://fullstackopen.com/en) free online Fullstack course. You may elect to complete this specialization only once.
+Complete the [Deep Dive Into Modern Web Development - Full Stack Open 2021](https://fullstackopen.com/en) free online Fullstack course. You may elect to complete this specialization only once.
 
 | Courses                                                                                                                                                                         |   Status   |   Evidence   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :--------: | :----------: |
