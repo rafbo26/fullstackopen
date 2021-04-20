@@ -1,9 +1,21 @@
 import React from 'react'
 
-const Person = ({ people }) => {
+const Person = ({ people, onClick }) => {
   return (
     <div>
-      {people.map(person => <li key={person.name}>{person.name} {person.number}</li>)}
+      {people.map(person => {
+          return (
+            <li key={person.name}>{person.name} {person.number}
+              <button 
+                key={person.name} 
+                onClick={onClick} 
+                value={person.id}>
+                delete
+              </button>
+            </li>
+          )
+        }
+      )}
     </div>
   )
 }
