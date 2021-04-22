@@ -1,7 +1,11 @@
 const express = require('express')
+const cors = require('cors')
+const { response } = require('express')
+
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 let notes = [
   {
@@ -58,7 +62,6 @@ const generateid = () => {
 
 app.post('/api/notes', (request, response) => {
   const body = request.body
-
   if(!body.content) {
     return response.status(400).json({
       error: 'content missing'
@@ -73,8 +76,21 @@ app.post('/api/notes', (request, response) => {
   }
   
   notes = notes.concat(note)
+  response.json(note)
+})
 
-  response.json(notes)
+app.put('/api/notes/:id', (request, response) => {
+  const id = Number(request.params.id)
+  const body = request.body
+  notes = notes.map(note => {
+    if (note.id === id) {
+      return body
+    } else {
+      return note
+    }
+  })
+  console.log(notes)
+  response.json(body)
 })
 
 const PORT = 3001
